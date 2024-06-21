@@ -45,9 +45,12 @@ iframe {
     border: none;
     margin-top: 20px;
 }
+#back{
+    display:none;
+}
 </style>
 <body>
-<button onclick="back()">BACK</button>
+<button id='back' onclick="back()">BACK</button>
     <div class="game-buttons">
     <button onclick="startGame('resident-evil')">Resident Evil </button>
     <button onclick="startGame('resident-evil-2')">Resident Evil 2</button>
@@ -69,10 +72,11 @@ iframe {
     <script>
     const iframes = document.querySelectorAll('iframe');
     const buttonContainer = document.querySelector('.game-buttons');
-
+    var back = document.getElementById('back')
     function startGame(game) {
         iframes.forEach(iframe => iframe.style.display = 'none');
         buttonContainer.style.display = 'none';
+        back.style.display = 'block';
 
         const selectedIframe = document.getElementById(game);
         if (selectedIframe) {
@@ -84,6 +88,7 @@ iframe {
 
     function back() { 
         buttonContainer.style.display = 'block';
+        back.style.display = 'none';
         iframes.forEach(iframe => iframe.style.display = 'none');
     }
     </script>

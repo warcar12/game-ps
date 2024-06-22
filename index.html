@@ -53,14 +53,16 @@
 <body>
     <button id='back' onclick="back()">BACK</button>
     <div class="game-buttons">
-        <button onclick="startGame('resident-evil')">Resident Evil</button>
-        <button onclick="startGame('resident-evil-2')">Resident Evil 2</button>
-        <button onclick="startGame('resident-evil-3')">Resident Evil 3</button>
+        <button onclick="startGame('resident-evil')">ResidentEvil</button>
+        <button onclick="startGame('resident-evil-2')">ResidentEvil-2</button>
+        <button onclick="startGame('resident-evil-3')">ResidentEvil-3</button>
         <button onclick="startGame('gta')">GTA</button>
-        <button onclick="startGame('gta2')">GTA2</button>
+        <button onclick="startGame('gta2')">GTA-2</button>
         <button onclick="startGame('tekken')">Tekken</button>
-        <button onclick="startGame('tekken2')">Tekken2</button>
-        <button onclick="startGame('tekken3')">Tekken3</button>
+        <button onclick="startGame('tekken2')">Tekken-2</button>
+        <button onclick="startGame('tekken3')">Tekken-3</button>
+        <button onclick="startGame('tenchu')">Tenchu</button>
+        <button onclick="startGame('tenchu2')">Tenchu-2</button>
     </div>
     <iframe id="resident-evil" src="https://www.retrogames.cc/embed/42875-resident-evil.html"></iframe>
     <iframe id="resident-evil-2" src="https://www.retrogames.cc/embed/42943-resident-evil-2-dual-shock-ver-disc-1-leon.html"></iframe>
@@ -69,7 +71,10 @@
     <iframe id="gta2" src="https://www.retrogames.cc/embed/41828-grand-theft-auto-2.html"></iframe>
     <iframe id="tekken" src="https://www.retrogames.cc/embed/41513-tekken.html"></iframe>
     <iframe id="tekken2" src="https://www.retrogames.cc/embed/41514-tekken-2.html"></iframe>
-    <iframe id="tekken3" src="https://www.retrogames.cc/embed/41515-tekken-3.html"></iframe>
+    <iframe id="tekken3" src="https://www.retrogames.cc/embed/40238-tekken-3.html"></iframe>
+    <iframe id='tenchu' src="https://www.retrogames.cc/embed/43770-tenchu-stealth-assassins-usa.html"></iframe>
+    <iframe id='tenchu2' src="https://www.retrogames.cc/embed/43771-tenchu-2-birth-of-the-stealth-assassins-usa.html"></iframe>
+    
     <script>
         const iframes = document.querySelectorAll('iframe');
         const buttonContainer = document.querySelector('.game-buttons');

@@ -48,6 +48,49 @@
         #back {
             display: none;
         }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .game-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .game-buttons button {
+            margin: 10px;
+            width: calc(33.33% - 20px); /* 3 buttons per row with some margin */
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .game-buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        iframe {
+            display: none;
+            width: 80%;
+            height: 450px;
+            border: none;
+            margin-top: 20px;
+        }
+
+        #back {
+            display: none;
+        }
     </style>
 </head>
 <body>

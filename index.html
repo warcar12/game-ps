@@ -6,7 +6,7 @@
     <title>Games</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body {
+       body {
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
@@ -16,15 +16,14 @@
         }
 
         .game-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            text-align: center;
             margin-bottom: 20px;
         }
 
-        .game-buttons button {
+        button {
+            display: block;
             margin: 10px;
-            width: calc(50% - 20px); /* 3 buttons per row with some margin */
+            width: 150px;
             padding: 10px 20px;
             font-size: 16px;
             background-color: #007BFF;
@@ -34,13 +33,13 @@
             cursor: pointer;
         }
 
-        .game-buttons button:hover {
+        button:hover {
             background-color: #0056b3;
         }
 
         iframe {
             display: none;
-            width: 80%;
+            width: 600px;
             height: 450px;
             border: none;
             margin-top: 20px;

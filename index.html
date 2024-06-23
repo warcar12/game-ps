@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -119,6 +119,89 @@
             buttonContainer.style.display = 'block';
             backButton.style.display = 'none';
             iframes.forEach(iframe => iframe.style.display = 'none');
+        }
+    </script>
+</body>
+</html>
+ -->
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .game-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            display: block;
+            margin: 10px;
+            width: 150px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-buttons">
+        <button onclick="startGame('santaparkour')">Santa-Parkour</button>
+        <button onclick="startGame('bikeracing')">Bike-Racing</button>
+        <button onclick="startGame('factorydomination')">Factory-Domination</button>
+        <button onclick="startGame('townbillionaire')">Town-Billionaire</button>
+        <button onclick="startGame('tictactoe')">Tic-Tac-toe</button>
+        <button onclick="startGame('dangerdash')">Danger-Dash</button>
+        <button onclick="startGame('hunterhitman')">Hunter-Hitman</button>
+        <button onclick="startGame('rallychampion')">Rally-Champion</button>
+        <button onclick="startGame('hillclimbracing')">HillClimb-Racing</button>
+        <button onclick="startGame('cyclesprint')">Cycle-Sprint</button>
+        <button onclick="startGame('airportcontroller')">Airport-Controller</button>
+    </div>
+    <script>
+        function startGame(game) {
+            const gameUrls = {
+                'santaparkour': "https://marketjs.cdn.start.gg/9n7c9gz12jtz/v4/index.html?msstart_sdk_init=eyJwYXJlbnRPcmlnaW4iOiJodHRwczovL3d3dy5tc24uY29tIiwiY2xpZW50SWQiOiIwNEVBM0FFOUVFRTg2ODc5MTNDRTJFNEZFRkVFNjlCQyIsImxvY2FsZSI6ImVuLWluIiwiZW50cnlQb2ludElkIjoiY2diaW5naHAifQ",
+                'bikeracing': "https://softgames.cdn.start.gg/9p70lt0zr384/v21/index.html?msstart_sdk_init=eyJwYXJlbnRPcmlnaW4iOiJodHRwczovL3d3dy5tc24uY29tIiwiY2xpZW50SWQiOiIwNEVBM0FFOUVFRTg2ODc5MTNDRTJFNEZFRkVFNjlCQyIsImxvY2FsZSI6ImVuLWluIiwiZW50cnlQb2ludElkIjoiY2diaW5naHAifQ",
+                'factorydomination': "https://marketjs.cdn.start.gg/9nqlh1t66ght/v8/index.html?msstart_sdk_init=eyJwYXJlbnRPcmlnaW4iOiJodHRwczovL3d3dy5tc24uY29tIiwiY2xpZW50SWQiOiIwNEVBM0FFOUVFRTg2ODc5MTNDRTJFNEZFRkVFNjlCQyIsImxvY2FsZSI6ImVuLWluIiwiZW50cnlQb2ludElkIjoiY2diaW5naHAifQ",
+                'townbillionaire': "https://marketjs.cdn.start.gg/9pk3bhpqd11f/v4/index.html?msstart_sdk_init=eyJwYXJlbnRPcmlnaW4iOiJodHRwczovL3d3dy5tc24uY29tIiwiY2xpZW50SWQiOiIwNEVBM0FFOUVFRTg2ODc5MTNDRTJFNEZFRkVFNjlCQyIsImxvY2FsZSI6ImVuLWluIiwiZW50cnlQb2ludElkIjoiY2diaW5naHAifQ",
+                'tictactoe': "https://codethislab.cdn.start.gg/9p4z7gtl3mlh/v9/index.html?msstart_sdk_init=eyJwYXJlbnRPcmlnaW4iOiJodHRwczovL3d3dy5tc24uY29tIiwiY2xpZW50SWQiOiIwNEVBM0FFOUVFRTg2ODc5MTNDRTJFNEZFRkVFNjlCQyIsImxvY2FsZSI6ImVuLWluIiwiZW50cnlQb2ludElkIjoiY2diaW5naHAifQ",
+                'dangerdash': "https://cdn.ludigames.com/microsoft/start-dangerDash/03-cdn/?msstart_sdk_init=eyJwYXJlbnRPcmlnaW4iOiJodHRwczovL3d3dy5tc24uY29tIiwiY2xpZW50SWQiOiIwNEVBM0FFOUVFRTg2ODc5MTNDRTJFNEZFRkVFNjlCQyIsImxvY2FsZSI6ImVuLWluIiwiZW50cnlQb2ludElkIjoiY2diaW5naHAifQ",
+                'hunterhitman': "https://marketjs.cdn.start.gg/9n8bq7npxbfw/v9/index.html?msstart_sdk_init=eyJwYXJlbnRPcmlnaW4iOiJodHRwczovL3d3dy5tc24uY29tIiwiY2xpZW50SWQiOiIwNEVBM0FFOUVFRTg2ODc5MTNDRTJFNEZFRkVFNjlCQyIsImxvY2FsZSI6ImVuLWluIiwiZW50cnlQb2ludElkIjoiY2diaW5naHAifQ",
+                'rallychampion': "https://marketjs.cdn.start.gg/9pmdcq52j3hj/v2/index.html?msstart_sdk_init=eyJwYXJlbnRPcmlnaW4iOiJodHRwczovL3d3dy5tc24uY29tIiwiY2xpZW50SWQiOiIwNEVBM0FFOUVFRTg2ODc5MTNDRTJFNEZFRkVFNjlCQyIsImxvY2FsZSI6ImVuLWluIiwiZW50cnlQb2ludElkIjoiY2diaW5naHAifQ",
+                'hillclimbracing': "https://softgames.cdn.start.gg/9mw8rk6nb6kr/v9/index.html?msstart_sdk_init=eyJwYXJlbnRPcmlnaW4iOiJodHRwczovL3d3dy5tc24uY29tIiwiY2xpZW50SWQiOiIwNEVBM0FFOUVFRTg2ODc5MTNDRTJFNEZFRkVFNjlCQyIsImxvY2FsZSI6ImVuLWluIiwiZW50cnlQb2ludElkIjoiY2diaW5naHAifQ",
+                'cyclesprint': "https://codethislab.cdn.start.gg/9mvq9gxf024k/v5/index.html?msstart_sdk_init=eyJwYXJlbnRPcmlnaW4iOiJodHRwczovL3d3dy5tc24uY29tIiwiY2xpZW50SWQiOiIwNEVBM0FFOUVFRTg2ODc5MTNDRTJFNEZFRkVFNjlCQyIsImxvY2FsZSI6ImVuLWluIiwiZW50cnlQb2ludElkIjoiY2diaW5naHAifQ",
+                'airportcontroller': "https://hammerplay.cdn.start.gg/9ng6cn9hn1ps/v1/index.html?msstart_sdk_init=eyJwYXJlbnRPcmlnaW4iOiJodHRwczovL3d3dy5tc24uY29tIiwiY2xpZW50SWQiOiIwNEVBM0FFOUVFRTg2ODc5MTNDRTJFNEZFRkVFNjlCQyIsImxvY2FsZSI6ImVuLWluIiwiZW50cnlQb2ludElkIjoiY2diaW5naHAifQ"
+            };
+
+            const url = gameUrls[game];
+            if (url) {
+                window.open(url, '_blank');
+            } else {
+                alert('Game not available');
+            }
         }
     </script>
 </body>
